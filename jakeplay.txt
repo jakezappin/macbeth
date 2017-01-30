@@ -1,0 +1,14 @@
+<SPEECH>
+<SPEAKER>Jake</SPEAKER>
+<LINE>Hi</LINE>
+<LINE>My name is Jake!</LINE>
+<LINE>How are you?</LINE>
+</SPEECH>
+
+<SPEECH>
+<SPEAKER>Kristen</SPEAKER>
+<LINE>Hi</LINE>
+<LINE>I am doing well</LINE>
+<LINE>My name is Kristen</LINE>
+<LINE>How are you?</LINE>
+</SPEECH>
