@@ -1,0 +1,7 @@
+<h1>Line Counter </h1>
+
+<%= form_tag("/display", method: "get") do %>
+  <%= label_tag(:uri, "Enter a URL:") %>
+  <%= text_field_tag(:uri) %>
+  <%= submit_tag("Submit") %>
+<% end %>

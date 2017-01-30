@@ -31,6 +31,8 @@ def count_lines(filename)
     end
   end
 
+  speakers.delete("ALL")
+  speakers.delete_if {|key, value| value == 0 }
   return speakers
 
 end
@@ -38,8 +40,6 @@ end
 def pretty_print_hash(hash)
 
   hash = hash.sort_by {|_key, value| value}.reverse.to_h
-  hash.delete("ALL")
-  hash.delete_if {|key, value| value == 0 }
 
   hash.each do |key, value|
     puts value.to_s + " " + key.downcase.split(" ").map(&:capitalize).join(" ")
@@ -63,5 +63,5 @@ save_xml_to_file(macbeth_xml, 'macbeth.txt')
 #Count the lines of each speaker in Macbeth
 macbeth_speakers = count_lines('macbeth.txt')
 
-#Print the results 
+#Print the results
 pretty_print_hash(macbeth_speakers)

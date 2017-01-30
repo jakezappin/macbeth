@@ -1,0 +1,21 @@
+<h1><%=@title%></h1>
+
+<%= link_to '<button type="button">Back to Homepage</button>'.html_safe, index_path %>
+<br>
+<br>
+
+<table>
+  <tr>
+    <th>Speaker &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+    <th>Total Lines</th>
+  </tr>
+
+  <% @speakers = @speakers.sort_by {|_key, value| value}.reverse.to_h %>
+  <% @speakers.each do |key, value| %>
+    <% key = key.downcase.split(" ").map(&:capitalize).join(" ") %>
+    <tr>
+      <td><%=key%> &nbsp; &nbsp; &nbsp;</td>
+      <td><%=value%></td>
+    </tr>
+  <% end %>
+</table>

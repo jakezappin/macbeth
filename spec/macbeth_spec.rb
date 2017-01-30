@@ -5,7 +5,7 @@ require './macbeth'
 describe "#get_xml" do
 
   let(:note) { get_xml('http://www.w3schools.com/xml/note.xml')}
-  let(:macbeth) { get_xml('http://www.ibiblio.org/xml/examples/shakespeare/macbeth.xml') }
+  #let(:macbeth) { get_xml('http://www.ibiblio.org/xml/examples/shakespeare/macbeth.xml') }
 
   #General Tests
   it "accepts one argument, a uri" do
@@ -21,13 +21,13 @@ describe "#get_xml" do
   end
 
   #Macbeth Specific Tests
-  it "should return the text" do
-    expect(macbeth).to be_truthy
-  end
+  #it "should return the text" do
+  #  expect(macbeth).to be_truthy
+  #end
 
-  it "should contain '<SPEAKER>MACBETH</SPEAKER>' in the returned text during runtime of macbeth.rb" do
-    expect(macbeth.body).to include("<SPEAKER>MACBETH</SPEAKER>")
-  end
+  #it "should contain '<SPEAKER>MACBETH</SPEAKER>' in the returned text during runtime of macbeth.rb" do
+  #  expect(macbeth.body).to include("<SPEAKER>MACBETH</SPEAKER>")
+  #end
 
 end
 
