@@ -47,8 +47,21 @@ def pretty_print_hash(hash)
 
 end
 
+###################
+#                 #
+#   Driver Code   #
+#                 #
+###################
+
+#Request Macbeth XML from Internet
 macbeth_uri = 'http://www.ibiblio.org/xml/examples/shakespeare/macbeth.xml'
 macbeth_xml = get_xml(macbeth_uri)
+
+#Save the Macbeth XML to a file as Text
 save_xml_to_file(macbeth_xml, 'macbeth.txt')
+
+#Count the lines of each speaker in Macbeth
 macbeth_speakers = count_lines('macbeth.txt')
+
+#Print the results 
 pretty_print_hash(macbeth_speakers)
