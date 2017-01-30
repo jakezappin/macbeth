@@ -10,7 +10,6 @@
     <th>Total Lines</th>
   </tr>
 
-  <% @speakers = @speakers.sort_by {|_key, value| value}.reverse.to_h %>
   <% @speakers.each do |key, value| %>
     <% key = key.downcase.split(" ").map(&:capitalize).join(" ") %>
     <tr>

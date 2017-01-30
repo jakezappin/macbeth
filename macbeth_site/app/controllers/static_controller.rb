@@ -51,6 +51,7 @@ class StaticController < ApplicationController
 
     speakers.delete("ALL")
     speakers.delete_if {|key, value| value == 0 }
+    speakers = speakers.sort_by {|_key, value| value}.reverse.to_h
     return speakers
 
   end
